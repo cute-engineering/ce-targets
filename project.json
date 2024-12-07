@@ -1,0 +1,7 @@
+{
+    "$schema": "https://schemas.cute.engineering/stable/cutekit.manifest.project.v1",
+    "id": "cute-engineering/ce-targets",
+    "version": "v1.0.0",
+    "type": "project",
+    "description": "Base targets for CuteKit"
+}

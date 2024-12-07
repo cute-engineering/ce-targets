@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schemas.cute.engineering/stable/cutekit.manifest.target.v1",
+    "id": "wasm",
+    "type": "target",
+    "props": {
+        "toolchain": "clang",
+        "arch": "unknown",
+        "sys": "wasm",
+        "abi": "unknown",
+        "bits": "unknown",
+        "freestanding": false,
+        "host": false,
+        "sys-encoding": "utf8",
+        "sys-line-ending": "lf",
+        "sys-path-separator": "slash"
+    },
+    "tools": {
+        "cc": {
+            "cmd": "{shell.latest('clang')}",
+            "args": [
+                "--target=wasm32-unknown-wasi"
+            ]
+        },
+        "cxx": {
+            "cmd": "{shell.latest('clang++')}",
+            "args": [
+                "--target=wasm32-unknown-wasi"
+            ]
+        },
+        "ld": {
+            "cmd": "{shell.latest('wasm-ld')}",
+            "args": [
+                "--no-entry",
+                "--export-all"
+            ]
+        },
+        "ar": {
+            "cmd": "{shell.latest('llvm-ar')}",
+            "args": [
+                "rcs"
+            ]
+        },
+        "as": {
+            "cmd": "nasm",
+            "args": [
+                "-f",
+                "elf64"
+            ]
+        }
+    }
+}
