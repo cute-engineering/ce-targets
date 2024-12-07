@@ -12,7 +12,8 @@
         "host": true,
         "sys-encoding": "utf8",
         "sys-line-ending": "lf",
-        "sys-path-separator": "slash"
+        "sys-path-separator": "slash",
+        "sys-terminal": "ansi"
     },
     "tools": {
         "cc": {

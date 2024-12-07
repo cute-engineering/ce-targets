@@ -1,18 +1,19 @@
 {
     "$schema": "https://schemas.cute.engineering/stable/cutekit.manifest.target.v1",
-    "id": "wasm",
+    "id": "wasm32",
     "type": "target",
     "props": {
         "toolchain": "clang",
         "arch": "unknown",
         "sys": "wasm",
         "abi": "unknown",
-        "bits": "unknown",
+        "bits": "32",
         "freestanding": false,
         "host": false,
         "sys-encoding": "utf8",
         "sys-line-ending": "lf",
-        "sys-path-separator": "slash"
+        "sys-path-separator": "slash",
+        "sys-terminal": false
     },
     "tools": {
         "cc": {

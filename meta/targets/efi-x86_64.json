@@ -12,7 +12,8 @@
         "host": false,
         "sys-encoding": "utf16",
         "sys-line-ending": "crlf",
-        "sys-path-separator": "backslash"
+        "sys-path-separator": "backslash",
+        "sys-terminal": false
     },
     "tools": {
         "cc": {
