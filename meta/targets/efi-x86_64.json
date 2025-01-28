@@ -19,8 +19,7 @@
         "cc": {
             "cmd": "{shell.latest('clang')}",
             "args": [
-                "-target",
-                "x86_64-unknown-windows",
+                "--target=x86_64-unknown-windows",
                 "-ffreestanding",
                 "-fno-stack-protector",
                 "-fshort-wchar",
@@ -32,21 +31,21 @@
         "cxx": {
             "cmd": "{shell.latest('clang++')}",
             "args": [
-                "-target",
-                "x86_64-unknown-windows",
+                "--target=x86_64-unknown-windows",
                 "-ffreestanding",
                 "-fno-stack-protector",
                 "-fshort-wchar",
                 "-mno-red-zone",
                 "-fno-delayed-template-parsing",
-                "-fno-ms-compatibility"
+                "-fno-ms-compatibility",
+                "-fno-exceptions",
+                "-fno-rtti"
             ]
         },
         "ld": {
             "cmd": "{shell.latest('clang++')}",
             "args": [
-                "-target",
-                "x86_64-unknown-windows",
+                "--target=x86_64-unknown-windows",
                 "-nostdlib",
                 "-Wl,-entry:efi_main",
                 "-Wl,-subsystem:efi_application",

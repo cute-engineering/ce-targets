@@ -19,8 +19,7 @@
         "cc": {
             "cmd": "{shell.latest('clang')}",
             "args": [
-                "-target",
-                "x86_64-none-elf",
+                "--target=x86_64-none-elf",
                 "-ffreestanding",
                 "-fno-stack-protector",
                 "-mno-80387",
@@ -35,8 +34,7 @@
         "cxx": {
             "cmd": "{shell.latest('clang++')}",
             "args": [
-                "-target",
-                "x86_64-none-elf",
+                "--target=x86_64-none-elf",
                 "-ffreestanding",
                 "-fno-stack-protector",
                 "-mno-80387",
@@ -45,7 +43,9 @@
                 "-mno-sse",
                 "-mno-sse2",
                 "-mno-red-zone",
-                "-mcmodel=kernel"
+                "-mcmodel=kernel",
+                "-fno-exceptions",
+                "-fno-rtti"
             ]
         },
         "ld": {

@@ -25,7 +25,9 @@
         "cxx": {
             "cmd": "{shell.latest('clang++')}",
             "args": [
-                "--target=wasm32-unknown-wasi"
+                "--target=wasm32-unknown-wasi",
+                "-fno-exceptions",
+                "-fno-rtti"
             ]
         },
         "ld": {
