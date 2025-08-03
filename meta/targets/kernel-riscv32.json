@@ -6,7 +6,7 @@
         "toolchain": "clang",
         "arch": "riscv32",
         "bits": "32",
-        "sys": "hjert",
+        "sys": "kernel",
         "abi": "sysv",
         "freestanding": true,
         "host": false,
