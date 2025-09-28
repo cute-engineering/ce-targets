@@ -20,24 +20,24 @@
             "cmd": "{shell.latest('clang')}",
             "args": [
                 "--target=x86_64-unknown-windows",
-                "-ffreestanding",
                 "-fno-stack-protector",
                 "-fshort-wchar",
                 "-mno-red-zone",
                 "-fno-delayed-template-parsing",
-                "-fno-ms-compatibility"
+                "-fno-ms-compatibility",
+                "-fno-threadsafe-statics"
             ]
         },
         "cxx": {
             "cmd": "{shell.latest('clang++')}",
             "args": [
                 "--target=x86_64-unknown-windows",
-                "-ffreestanding",
                 "-fno-stack-protector",
                 "-fshort-wchar",
                 "-mno-red-zone",
                 "-fno-delayed-template-parsing",
                 "-fno-ms-compatibility",
+                "-fno-threadsafe-statics",
                 "-fno-exceptions",
                 "-fno-rtti"
             ]
