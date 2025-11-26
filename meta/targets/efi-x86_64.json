@@ -17,7 +17,7 @@
     },
     "tools": {
         "cc": {
-            "cmd": "{shell.latest('clang')}",
+            "cmd": "{shell.env('CC', shell.latest('clang'))}",
             "args": [
                 "--target=x86_64-unknown-windows",
                 "-fno-stack-protector",
@@ -29,7 +29,7 @@
             ]
         },
         "cxx": {
-            "cmd": "{shell.latest('clang++')}",
+            "cmd": "{shell.env('CXX', shell.latest('clang++'))}",
             "args": [
                 "--target=x86_64-unknown-windows",
                 "-fno-stack-protector",
@@ -43,7 +43,7 @@
             ]
         },
         "ld": {
-            "cmd": "{shell.latest('clang++')}",
+            "cmd": "{shell.env('LD', shell.latest('clang++'))}",
             "args": [
                 "--target=x86_64-unknown-windows",
                 "-nostdlib",
@@ -53,7 +53,7 @@
             ]
         },
         "ar": {
-            "cmd": "{shell.latest('llvm-ar')}",
+            "cmd": "{shell.env('AR', shell.latest('llvm-ar'))}",
             "args": [
                 "rcs"
             ]

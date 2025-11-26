@@ -17,13 +17,13 @@
     },
     "tools": {
         "cc": {
-            "cmd": "{shell.latest('clang')}",
+            "cmd": "{shell.env('CC', shell.latest('clang'))}",
             "args": [
                 "--target=wasm32-unknown-wasi"
             ]
         },
         "cxx": {
-            "cmd": "{shell.latest('clang++')}",
+            "cmd": "{shell.env('CXX', shell.latest('clang++'))}",
             "args": [
                 "--target=wasm32-unknown-wasi",
                 "-fno-exceptions",
@@ -31,14 +31,14 @@
             ]
         },
         "ld": {
-            "cmd": "{shell.latest('wasm-ld')}",
+            "cmd": "{shell.env('LD', shell.latest('wasm-ld'))}",
             "args": [
                 "--no-entry",
                 "--export-all"
             ]
         },
         "ar": {
-            "cmd": "{shell.latest('llvm-ar')}",
+            "cmd": "{shell.env('AR', shell.latest('llvm-ar'))}",
             "args": [
                 "rcs"
             ]

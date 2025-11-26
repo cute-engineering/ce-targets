@@ -17,7 +17,7 @@
     },
     "tools": {
         "cc": {
-            "cmd": "{shell.latest('clang')}",
+            "cmd": "{shell.env('CC', shell.latest('clang'))}",
             "args": [
                 "--target=riscv32",
                 "-nostdlib",
@@ -25,7 +25,7 @@
             ]
         },
         "cxx": {
-            "cmd": "{shell.latest('clang++')}",
+            "cmd": "{shell.env('CXX', shell.latest('clang++'))}",
             "args": [
                 "--target=riscv32",
                 "-nostdlib",
@@ -35,7 +35,7 @@
             ]
         },
         "ld": {
-            "cmd": "{shell.latest('ld.lld')}",
+            "cmd": "{shell.env('LD', shell.latest('ld.lld'))}",
             "args": [
                 "-m",
                 "elf32lriscv",
@@ -48,13 +48,13 @@
             ]
         },
         "ar": {
-            "cmd": "{shell.latest('llvm-ar')}",
+            "cmd": "{shell.env('AR', shell.latest('llvm-ar'))}",
             "args": [
                 "rcs"
             ]
         },
         "as": {
-            "cmd": "{shell.latest('clang')}",
+            "cmd": "{shell.env('AS', shell.latest('clang'))}",
             "args": [
                 "--target=riscv32",
                 "-c"

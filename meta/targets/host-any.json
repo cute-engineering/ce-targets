@@ -17,16 +17,17 @@
     },
     "tools": {
         "cc": {
-            "cmd": "{shell.latest('clang')}"
+            
+            "cmd": "{shell.env('CC', shell.latest('clang'))}"
         },
         "cxx": {
-            "cmd": "{shell.latest('clang++')}"
+            "cmd": "{shell.env('CXX', shell.latest('clang++'))}"
         },
         "ld": {
-            "cmd": "{shell.latest('clang++')}"
+            "cmd": "{shell.env('LD', shell.latest('clang++'))}"
         },
         "ar": {
-            "cmd": "{shell.latest('llvm-ar')}",
+            "cmd": "{shell.env('AR', shell.latest('llvm-ar'))}",
             "args": [
                 "rcs"
             ]
